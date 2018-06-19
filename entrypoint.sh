@@ -1,3 +1,3 @@
 #!/bin/bash
-sed -i '".*IP_ADDR" s/$/$IP_ADDR/' /bin/entrypoint.sh
-glances -c $IP_ADDR
+python -m glances -C /glances/conf/glances.conf $GLANCES_OPT
+tail -f /tmp/glances-root.log
